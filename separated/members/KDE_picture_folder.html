@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진첩 슬라이더</title>
+    <link rel="stylesheet" href="../CSS/folder.css">
+</head>
+<body>
+    <div class="album-container">
+        <div class="photo-frame">
+            <button class="arrow left" onclick="prevImage()">&#10094;</button>
+            <img id="slider-image" src="../images/d1.jpg" alt="앨범 사진">
+            <button class="arrow right" onclick="nextImage()">&#10095;</button>
+        </div>
+        <!-- 뒤로가기 버튼 -->
+        <div class="back-button">
+            <a href="KDE.html" class="btn btn-primary">뒤로가기</a>
+        </div>
+    </div>
+
+    <script>
+        const images = ["../images/d1.jpg", "../images/d2.jpg", "../images/d3.jpg", "../images/d4.jpg","../images/d5.jpg","../images/d6.jpg"];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            document.getElementById("slider-image").src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>
