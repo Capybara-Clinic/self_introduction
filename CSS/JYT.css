@@ -1,0 +1,480 @@
+/* ===== 기본 스타일 설정 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f5e6; 
+    color: #5b4636; 
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== 헤더 스타일 ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background-color: #8d7b68; 
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-color: #c8b6a6; 
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #f1ebe3; 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.profile-image::before {
+    left: calc(50% - 60px);
+}
+
+.profile-image::after {
+    right: calc(50% - 60px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ===== 네비게이션 스타일 ===== */
+nav {
+    background-color: #a68f7b; 
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f1ebe3; 
+}
+
+/* ===== 메인 콘텐츠 스타일 ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== 섹션 스타일 ===== */
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #8d7b68; 
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #c8b6a6; 
+    margin: 10px auto;
+}
+
+/* ===== 카드 스타일 ===== */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #e6dfd1; 
+    line-height: 1.8;
+}
+
+.card h3, .card h4 {
+    color: #8d7b68; 
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-color: #c8b6a6;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: #8d7b68; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e6dfd1; 
+    padding-bottom: 10px;
+}
+
+/* ===== 바이오 스타일 ===== */
+.bio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.bio-image {
+    flex: 0 0 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #e6dfd1; 
+    max-height: 300px;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bio-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bio-content p {
+    margin-bottom: 15px;
+}
+
+/* ===== 스킬 바 스타일 ===== */
+.skill-container {
+    width: 100%;
+    background-color: #e6dfd1; 
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.skill {
+    text-align: right;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 30px;
+    background-color: #8d7b68; 
+}
+
+.skill-90 {width: 90%;}
+.skill-80 {width: 80%;}
+.skill-70 {width: 70%;}
+.skill-60 {width: 60%;}
+
+/* ===== 스킬 태그 스타일 ===== */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #e6dfd1; 
+    color: #5b4636; 
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.skill-tag:hover {
+    background-color: #c8b6a6; 
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ===== 타임라인 스타일 ===== */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #c8b6a6; 
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #8d7b68; 
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -8px;
+}
+
+.timeline-date {
+    display: block;
+    color: #8d7b68; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ===== 프로젝트 스타일 ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #e6dfd1; 
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-color: #c8b6a6; 
+}
+
+.project-image {
+    height: 200px;
+    background-color: #e6dfd1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #5b4636; 
+}
+
+/* ===== 연락처 스타일 ===== */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    min-width: 200px;
+}
+
+.contact-icon {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+/* ===== 푸터 스타일 ===== */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    color: #8d7b68; 
+    font-size: 0.9rem;
+    background-color: #f1ebe3; 
+    border-radius: 15px;
+}
+
+/* ===== 유틸리티 클래스 ===== */
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* ===== 반응형 디자인 ===== */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 30px;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item::before {
+        left: 22px;
+        right: auto;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bio {
+        flex-direction: column;
+    }
+    
+    .bio-image, .bio-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-image::before, 
+    .profile-image::after {
+        width: 25px;
+        height: 25px;
+        top: 35px;
+    }
+    
+    .profile-image::before {
+        left: calc(50% - 50px);
+    }
+    
+    .profile-image::after {
+        right: calc(50% - 50px);
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        padding: 10px;
+    }
+}
