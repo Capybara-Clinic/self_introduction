@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>자기소개 페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/KDE1.css">
 </head>
-<body>
-    
+
+<body class="bg-light">
+    <div class="container text-center py-5">
+        <!-- Profile Image and Text -->
+        <div class="profile-container">
+            <div class="profile-text">Hello, I'm Doeun</div>
+            <img src="../images/picture1.png" alt="프로필 사진" class="profile-image d-block mx-auto">
+        </div>
+
+        <!-- Horizontal Line -->
+        <hr class="my-5">
+        <!-- About Me 텍스트 -->
+        <h2 class="fw-bold fs-3 text-dark" style="font-family: 'Courier New', monospace;">About Me</h2>
+        <!-- 이미지들을 균일하게 배치 -->
+        <div class="image-container">
+            <div class="image-item">
+                    <img src="../images/picture2.png" alt="사진 2">
+                    <div class="small-images-container mt-3">
+                        <a href="KDE_insta.html">
+                            <img src="../images/insta.png" alt="insta" class="small-image" style="width: 40px; height: 40px;">
+                        </a>
+                        <a href="http://solved.ac/profile/kdeun8485" target="_blank">
+                            <img src="../images/baekjoon.png" alt="baekjoon" class="small-image" style="width: 40px; height: 40px;">
+                        </a>
+                        <a href="http://github.com/kimSummerrain" target="_blank">
+                            <img src="../images/github.png" alt="github" class="small-image" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item" style="font-family: 'Arial', sans-serif; font-weight: 500; font-size: 1.1rem; color: #333;">
+                <img src="../images/picture3.png" alt="사진 3">
+                <p>Java, Python</p>
+                <p>Spring Boot, Django, Flask</p>
+                <p>MySQL, MongoDB</p>
+            </div>
+            <div class="image-item">
+                <img src="../images/picture5.png" alt="사진 4">
+                <div class="small-images-container mt-3">
+                    <a href="KDE_picture_folder.html">
+                        <img src="../images/folder.png" alt="folder" class="small-image" style="width: 80px; height: 85px;">
+                    </a>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
