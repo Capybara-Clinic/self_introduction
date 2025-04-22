@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>자기소개 페이지</title>
-  <link rel="stylesheet" href="CBA.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 소개합니다</title>
+    <link rel="stylesheet" href="css/CBA.css">
 </head>
 <body>
-  <div class="card">
-    <img src="../image/sa.jpg" width="300">
-    <h1>안녕하세요!🐱 </h1>
-    <p>저는 최비아입니다.</p>
+    <div class="container">
+        <header>
+            <h1>안녕하세요! 최비아입니다.</h1>
+            <p>반갑습니다 🌟</p>
+        </header>
+        
+        <section>
+            <h2>me</h2>
+            <ul>
+                <li>컴퓨터학부 융합소프트웨어전공</li>
+                <li>2005.11.01</li>
+                <li>INTP</li>
+            </ul>
+        </section>
 
-    <h2>🎯me</h2>
-    <ul>
-      <li>컴퓨터학부 융합소프트웨어전공</li>
-      <li>INTP</li>
-      <li>2005.11.01</li>
-    </ul>
-  
-    <button onclick="sayHello()">눌러보세요</button>
-  </div>
+        <section>
+            <h2>연락처</h2>
+            <p>이메일 : beea111@mokpo.ac.kr</p>
+            <p>인스타그램 : @ouibbxx</p>
+            <section>
+                <h2>내 사진</h2>
+                
+                <!-- 사진 추가 -->
+                <img id="profileImage" src="img/cbainsta.jpg" alt="사진 넣기" style="width:200px; border-radius: 12px; margin-top: 20px;">
+                
+                <!-- 버튼 -->
+                <div style="margin-top: 20px;">
+                  <button onclick="changeImage()">사진 변경!!</button>
+                </div>
+              </section>
+              
+    </div>
 
-  <script src="CBA.js"></script> 
+    <script src="CBA.js"></script> 
 </body>
 </html>
